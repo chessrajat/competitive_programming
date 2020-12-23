@@ -1,10 +1,13 @@
 # finding sum of n large integers
 
+# def aVeryBigSum(ar):
+#     sum = 0
+#     for i in ar:
+#         sum += i
+#     return sum
+
 def aVeryBigSum(ar):
-    sum = 0
-    for i in ar:
-        sum += i
-    return sum
+    return sum(ar)
 
 if __name__ == '__main__':
 

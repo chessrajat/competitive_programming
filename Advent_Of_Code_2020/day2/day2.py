@@ -3,7 +3,7 @@
  * @Author: Rajat  
  * @Date: 2020-12-11 20:30:45 
  * @Last Modified by: Rajat
- * @Last Modified time: 2020-12-11 22:12:52
+ * @Last Modified time: 2020-12-11 22:23:30
  */
 '''
 
@@ -49,7 +49,7 @@ def password_philosophy2(pass_list):
 
 if __name__ == "__main__":
     sample_list = ["1-3 a: abcde","1-3 b: cdefg"]
-    with open("day2_1.txt","r") as f:
+    with open("./Advent_Of_Code_2020/day2/day2_1.txt","r") as f:
         pass_list = f.readlines()
     
     pass_list = [i.strip("\n") for i in pass_list]

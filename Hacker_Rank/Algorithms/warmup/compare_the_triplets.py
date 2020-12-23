@@ -7,13 +7,24 @@ import os
 # Finally, for elements 2, a[2] > b[2] so Alice receives a point.
 # The return array is [1, 1] with Alice's score first and Bob's second.
 
-def compareTriplets(a, b):
-    result = [0 ,0]
-    for i in range(len(a)):
-        if a[i]>b[i]:
-            result[0] = result[0] + 1
-        elif a[i]<b[i]:
-            result[1] = result[1] + 1
+# def compareTriplets(a, b):
+#     result = [0 ,0]
+#     for i in range(len(a)):
+#         if a[i]>b[i]:
+#             result[0] = result[0] + 1
+#         elif a[i]<b[i]:
+#             result[1] = result[1] + 1
+#         else:
+#             pass
+#     return result
+
+def compareTriplets(a,b):
+    result = [0,0]
+    for x,y in zip(a,b):
+        if x>y:
+            result[0] += 1
+        elif x<y:
+            result[1] += 1
         else:
             pass
     return result
