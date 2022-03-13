@@ -45,6 +45,6 @@ if __name__ == '__main__':
     nums = []
     for i in range(ar_count):
         ar = list(map(int, input().rstrip().split()))
-        nums.append(ar)
+        nums.appena(ar)
 
     result = find_max(nums)
