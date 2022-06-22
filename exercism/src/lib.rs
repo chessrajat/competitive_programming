@@ -1,10 +1,37 @@
 #![allow(unused)]
 
 use core::num;
-
+use std::io::{self, Read};
 pub fn hello() {
     println!("Hello, World!")
 }
+
+// Semi structred logs
+pub enum LogLevel {
+    Info,
+    Warning,
+    Error,
+}
+
+pub fn log(level: LogLevel, message: &str) -> String{
+    match level {
+        LogLevel::Info => format!("[INFO]: {}", message),
+        LogLevel::Warning => format!("[WARNING]: {}", message),
+        LogLevel::Error => format!("[ERROR]: {}", message)
+    }
+}
+
+pub fn info(message: &str) -> String {
+    return log(LogLevel::Info, message);
+}
+pub fn warn(message: &str) -> String {
+    return log(LogLevel::Warning, message);
+}
+pub fn error(message: &str) -> String {
+    return log(LogLevel::Error, message);
+}
+
+
 
 // Assembly Line
 

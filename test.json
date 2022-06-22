@@ -1,1 +1,15 @@
-print("hello")
+[
+    {
+        "type":"job",
+        "jobid":"jobid"
+    },
+    {
+        "type":"initialisation"
+    },
+    {
+        "type":"goto"
+    },
+    {
+        "type":"iteration"
+    }
+]
