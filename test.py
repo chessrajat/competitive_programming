@@ -1,10 +1,13 @@
 import pandas as pd
 
-df = pd.DataFrame({"a":[1,2,3,5], "b": [2,4,5,5], "c":[1,2,3,4]})
+one_df = pd.read_csv("one.csv", sep="|")
+two_df = pd.read_csv("two.csv", sep="|")
 
-a = ["b", "a"]
+total = pd.merge(one_df, two_df, how="outer", on="Email")
+added_df = total[~total["Email"].isin(one_df["Email"])]
+removed_df = total[~total["Email"].isin(two_df["Email"])]
+print(added_df)
+print(removed_df)
 
-df = df.loc[:, df.columns.isin(a)]
-df = df[a]
-
-print(df)
+# monkey paching
+# WAP to find out the percent matching between 2 strings and determine the percentage
