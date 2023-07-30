@@ -29,14 +29,20 @@ import numpy as np
 
 def arrayManipulation(n, queries):
     # Write your code here
-    our_list = [0] * n + 1
+    our_list = [0] * (n + 1)
     for query in queries:
         i = query[0]
         j = query[1]
         val = query[2]
         our_list[i - 1] += val
-        our_list[j] += val
-    return max(our_list)
+        our_list[j] -= val
+    
+    max_num = 0
+    temp = 0
+    for val in our_list:
+        temp += val
+        max_num = max(max_num, temp)
+    return max_num
 
 if __name__ == '__main__':
     first_multiple_input = input().rstrip().split()
