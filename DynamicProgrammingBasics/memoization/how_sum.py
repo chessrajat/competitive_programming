@@ -1,5 +1,4 @@
 def how_sum(target_num, numbers, memo={}):
-    output = []
     if target_num in memo:
         return memo[target_num]
     if target_num == 0:
